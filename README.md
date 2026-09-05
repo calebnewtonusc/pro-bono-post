@@ -11,6 +11,17 @@ It is not affiliated with 180 Degrees Consulting, its USC branch, its global
 network, or any of its clients. Nobody in 180 approved it, edited it, or knew
 what it would say. Every headline, quote, and statistic is invented.
 
+## Who is in it
+
+Nobody, unless they put themselves in. Headlines name **roles**, never people:
+"VP of Engagements," "Strategy Advisor, Class of 2029," "the PM." Every member
+knows exactly who that is, and no individual is the target of a joke they did
+not agree to.
+
+If you are in 180 and you want your name in the paper, see
+[JOIN-THE-MASTHEAD.md](JOIN-THE-MASTHEAD.md) and add yourself. Your name, your
+photo, your pull request. Delete it any time and it is gone the same day.
+
 ## The one editorial rule
 
 **Punch at the experience, never at the people.** The jokes are about slide
