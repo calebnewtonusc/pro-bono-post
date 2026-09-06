@@ -312,12 +312,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight') render(cur+1);
   if(e.key==='ArrowLeft') render(cur-1);
 });
-// deep link: /masthead.html#rohan-george opens his story
-(function(){
+// deep link: /masthead.html#rohan-george opens his story, on load and on hash change
+function fromHash(){
   const h=location.hash.slice(1); if(!h) return;
   const i=ART.findIndex(a=>a.n.toLowerCase().replace(/[^a-z0-9]+/g,'-')===h);
   if(i>=0) open_(i); else document.getElementById(h)?.scrollIntoView({block:'center'});
-})();
+}
+window.addEventListener('hashchange',fromHash);
+fromHash();
 </script>
 </body>
 </html>
