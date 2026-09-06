@@ -3,89 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>The Pro Bono Post</title>
-<meta name="description" content="An unofficial fan paper about student consulting. One headline at a time.">
+<meta name="description" content="An unofficial fan paper for 180 Degrees Consulting at USC. Tap for the next headline.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Pro Bono Post">
+<meta property="og:description" content="An unofficial, deeply affectionate fan paper for 180DC at USC. Twenty-two headlines. Tap for the next one.">
+<meta name="twitter:card" content="summary">
 <style>
   :root{
     --paper:#f5f1e8; --ink:#15120f; --soft:#6b6155; --rule:#d6cdb8; --red:#9b2118;
     --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
   }
+  @media (prefers-color-scheme: dark){
+    :root{--paper:#16140f;--ink:#f2ece0;--soft:#9b9084;--rule:#3b352b;--red:#e0705f}
+  }
   *{box-sizing:border-box}
   html,body{height:100%}
-  body{
-    margin:0; background:var(--paper); color:var(--ink); font-family:var(--serif);
-    display:flex; flex-direction:column; min-height:100dvh;
-    -webkit-tap-highlight-color:transparent; cursor:pointer; user-select:none;
-  }
-
-  header{
-    padding:18px 24px 14px; text-align:center; border-bottom:1px solid var(--rule);
-    flex:0 0 auto;
-  }
-  .logo{
-    font-family:var(--serif); font-weight:700; font-size:clamp(15px,3.4vw,19px);
-    letter-spacing:.16em; text-transform:uppercase; margin:0;
-  }
-  .sub{
-    font-family:var(--sans); font-size:9.5px; letter-spacing:.2em; text-transform:uppercase;
-    color:var(--soft); margin:6px 0 0;
-  }
-
-  main{
-    flex:1 1 auto; display:flex; align-items:center; justify-content:center;
-    padding:32px 24px; text-align:center;
-  }
-  .slot{max-width:820px; width:100%}
-  .kicker{
-    font-family:var(--sans); font-size:10px; letter-spacing:.24em; text-transform:uppercase;
-    color:var(--red); margin:0 0 20px; min-height:12px;
-  }
-  h1{
-    font-weight:700; font-size:clamp(30px,6.4vw,64px); line-height:1.08;
-    letter-spacing:-.015em; margin:0; text-wrap:balance;
-  }
-  .dek{
-    font-family:var(--sans); font-size:clamp(13px,2.2vw,16px); line-height:1.6;
-    color:var(--soft); margin:22px auto 0; max-width:560px; text-wrap:balance;
-  }
-  .fade{animation:in .34s ease}
-  @keyframes in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
+    display:flex;flex-direction:column;min-height:100dvh;
+    -webkit-tap-highlight-color:transparent;user-select:none;cursor:pointer}
+  header{padding:16px 22px 12px;text-align:center;border-bottom:1px solid var(--rule);flex:0 0 auto}
+  .logo{font-weight:700;font-size:clamp(14px,3.2vw,18px);letter-spacing:.16em;
+    text-transform:uppercase;margin:0}
+  .who{font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--red);margin:7px 0 0}
+  .who a{color:var(--soft);text-decoration:none;border-bottom:1px solid var(--rule)}
+  main{flex:1 1 auto;display:flex;align-items:center;justify-content:center;padding:26px 22px;text-align:center}
+  .slot{max-width:820px;width:100%}
+  .kicker{font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--red);margin:0 0 18px;min-height:12px}
+  h1{font-weight:700;font-size:clamp(28px,6vw,60px);line-height:1.08;letter-spacing:-.015em;
+    margin:0;text-wrap:balance}
+  .dek{font-family:var(--sans);font-size:clamp(13px,2.2vw,16px);line-height:1.6;color:var(--soft);
+    margin:20px auto 0;max-width:560px;text-wrap:balance}
+  .fade{animation:in .3s ease}
+  @keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.fade{animation:none}}
-
-  footer{
-    flex:0 0 auto; border-top:1px solid var(--rule); padding:14px 24px 20px;
-    display:flex; align-items:center; justify-content:space-between; gap:14px;
-    font-family:var(--sans); font-size:10.5px; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--soft);
-  }
-  .count{font-variant-numeric:tabular-nums; white-space:nowrap}
-  .hint{text-align:center; flex:1 1 auto}
-  .hint b{color:var(--ink); font-weight:600}
-  footer a{color:var(--soft); text-decoration:none; border-bottom:1px solid var(--rule); white-space:nowrap}
+  .next{display:inline-flex;align-items:center;gap:9px;margin:30px auto 0;padding:11px 22px;
+    border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer;
+    font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    border-radius:999px}
+  .next:hover{background:var(--ink);color:var(--paper)}
+  footer{flex:0 0 auto;border-top:1px solid var(--rule);padding:12px 22px 16px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+  .count{font-variant-numeric:tabular-nums}
+  footer a{color:var(--soft);text-decoration:none;border-bottom:1px solid var(--rule)}
   footer a:hover{color:var(--ink)}
-  @media (max-width:560px){
-    footer{flex-direction:column; gap:8px; font-size:9.5px}
-    .hint{order:-1}
-  }
-
-  .about{
-    cursor:auto; background:var(--paper); border-top:1px solid var(--rule);
-    padding:26px 24px 34px; font-family:var(--sans); font-size:11.5px; line-height:1.65;
-    color:var(--soft); text-align:center;
-  }
-  .about p{max-width:620px; margin:0 auto 10px}
-  .about a{color:var(--red)}
-  .staff{font-size:11px; color:var(--soft); border-top:1px solid var(--rule); padding-top:12px; margin-top:14px !important}
-  .staff em{color:var(--ink)}
-  .about strong{color:var(--ink)}
+  @media (max-width:560px){footer{flex-direction:column;gap:7px;font-size:9.5px}}
+  .about{cursor:auto;border-top:1px solid var(--rule);padding:22px 22px 30px;
+    font-family:var(--sans);font-size:11.5px;line-height:1.65;color:var(--soft);text-align:center}
+  .about p{max-width:620px;margin:0 auto 9px}
+  .about a{color:var(--red)} .about strong{color:var(--ink)}
 </style>
 </head>
 <body>
-
 <header>
   <p class="logo">The Pro Bono Post</p>
-  <p class="sub">Unofficial &middot; Unaffiliated &middot; Price: Pro Bono</p>
+  <p class="who">An unofficial fan paper for 180DC @ USC &middot;
+     <a href="masthead.html">See the masthead &rarr;</a></p>
 </header>
 
 <main id="stage">
@@ -93,94 +71,50 @@
     <p class="kicker" id="kicker"></p>
     <h1 id="head"></h1>
     <p class="dek" id="dek"></p>
+    <button class="next" id="next">Next headline &rarr;</button>
   </div>
 </main>
 
 <footer>
   <span class="count" id="count"></span>
-  <span class="hint"><b>Tap anywhere</b> for the next one</span>
-  <a href="masthead.html">The masthead &rarr;</a>
+  <span>Tap anywhere, or press space</span>
+  <a href="masthead.html">The masthead</a>
 </footer>
 
 <section class="about" onclick="event.stopPropagation()">
-  <p>
-    <strong>This is a fan paper.</strong> Not affiliated with 180 Degrees Consulting, its USC
-    branch, its global network, or any of its clients. Every headline is invented. No real person
-    said any of this.
-  </p>
-  <p>
-    Made by <a href="https://github.com/calebnewtonusc">Caleb Newton</a>, who applied.
-    Got a better one? <a href="https://github.com/calebnewtonusc/pro-bono-post">Open a pull request.</a>
-    Something land wrong? Open an issue and it is gone the same day.
-  </p>
-  <p class="staff">
-    <strong>Masthead.</strong> Editor-in-Chief &amp; VP of Nothing In Particular &middot;
-    Deputy Editor for Slides Nobody Opened &middot; Bureau Chief, Week Eight Silence &middot;
-    Correspondent-at-Large, Leavey Third Floor &middot; Impact Measurement Desk (unstaffed) &middot;
-    <em>Your name here.</em>
-    <a href="https://github.com/calebnewtonusc/pro-bono-post/blob/main/JOIN-THE-MASTHEAD.md">Claim a beat &rarr;</a>
-  </p>
+  <p><strong>This is a fan paper.</strong> Not affiliated with, endorsed by, or connected to
+     180 Degrees Consulting, its USC branch, its global network, or any of its clients.
+     Every headline is invented. No real person said any of this.</p>
+  <p>Made by <a href="https://github.com/calebnewtonusc">Caleb Newton</a>, who applied and
+     would like that on the record. Want something changed or taken down?
+     <a href="https://github.com/calebnewtonusc/pro-bono-post/issues/new">Say so here</a>
+     and it is gone the same day, no questions.</p>
 </section>
 
 <script>
-const WIRE = [
-  ["Nation's Nonprofits","Sophomore Delivers Growth Strategy To Nonprofit That Has Survived Four Recessions","The organization was founded in 1987. He is nineteen."],
-  ["Executive Board","VP Of Engagements Confirms He Has Not Read The Appendix Either",""],
-  ["Report","Nobody In This Club Can Say 'Pro Bono' Without Slightly Straightening Their Back",""],
-  ["Digital Life","Consultant's LinkedIn Post About Engagement Longer Than Actual Deliverable","Three hundred words on his personal growth. Eleven on the client."],
-  ["Breaking","Team Discovers Client's Actual Problem Is Money, Delivers Framework Instead",""],
-  ["Strategy Advisors","Class Of 2029 Proposes Bold Idea Client Already Tried In 2021","They were very nice about it, which somehow made it worse."],
-  ["Recruitment","Applicant Says He Wants To Give Back, Also Has A McKinsey Tab Open",""],
-  ["Timeline","Week Three Consultant Full Of Ideas, Week Nine Consultant Just Wants Client To Open Email",""],
-  ["Local","Executive Director Nods Warmly Through Recommendation She Implemented In 2019","She let him finish. She is a better person than anyone in that room."],
-  ["Study","Ninety-Four Percent Of Deck Produced Between 11 PM And 2 AM On A Sunday",""],
-  ["Project Managers","PM Says 'No Wrong Answers,' Is Lying, Everyone Knows, Exercise Works Anyway",""],
-  ["Interviews","Case Candidate Sizes LA Burrito Market At Either Forty Million Or Four Billion","Interviewer notes the structure was excellent."],
-  ["Presentation Day","Client Brings Entire Staff, Team Brings Slide Titled 'Key Takeaways'",""],
-  ["Campus","Consultant Cries In Leavey, Returns To Meeting, Is Completely Fine",""],
-  ["VP Of Human Resources","Coffee Chat Scheduled For Fifteen Minutes Enters Its Fiftieth",""],
-  ["Workflow","Man Assigned To Market Research Has Been In Same Google Doc For Nine Days","Colleagues describe the doc as thriving."],
-  ["Language","Student Says 'Let's Take This Offline.' He Is Offline. He Is In A Room.",""],
-  ["Recruitment","Chair Reads Two Hundred Fifty Essays, Every One Of Them Mentions A Grandmother",""],
-  ["VP Of Finance","Budget Line Reading 'Snacks' Quietly Becomes The Most Load-Bearing Item",""],
-  ["Consensus","Team Agrees On A Font, Immediately Loses Eleven Minutes To Chart Type",""],
-  ["Home Life","Man Explains He Does Consulting, Parents Ask If He Is Okay For Money",""],
-  ["Second Round","Candidate Asked If He Has Questions, Has Four, Asks All Four",""],
-  ["VP Of Marketing","Instagram Carousel About Impact Gets More Engagement Than The Impact",""],
-  ["Follow-Up","Client Says Recommendation Was 'Really Helpful,' Team Unsure If Being Managed",""],
-  ["Faculty Advisor","Marshall Professor Asks One Question, Entire Workstream Collapses","He was not even being mean. That is the thing."],
-  ["Late Filing","Applicant Who Missed Deadline Emails Anyway, Is Somehow Respected","This paper takes no position. This paper is the applicant."],
-  ["Correction","The Post Previously Reported The Hard Part Is The Money","The hard part is getting people to agree. We regret the error and our entire worldview."]
-];
-
-// Shuffle once per visit so it never opens the same way twice.
-const order = WIRE.map((_,i)=>i);
-for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}
-
-let at = -1;
-const kicker=document.getElementById('kicker');
-const head=document.getElementById('head');
-const dek=document.getElementById('dek');
-const count=document.getElementById('count');
-const slot=document.querySelector('.slot');
-
+const WIRE = [["Nation's Nonprofits", "Sophomore Delivers Growth Strategy To Nonprofit That Has Survived Four Recessions", "The organization predates him by a decade. He is nineteen."], ["Report", "Nobody In This Club Can Say 'Pro Bono' Without Slightly Straightening Their Back", ""], ["Digital Life", "Consultant's LinkedIn Post About Engagement Longer Than Actual Deliverable", "Three hundred words on his personal growth. Eleven on the client."], ["Breaking", "Team Discovers Client's Actual Problem Is Money, Delivers Framework Instead", ""], ["Recruitment", "Applicant Says He Wants To Give Back, Also Has A Consulting Firm's Careers Page Open", ""], ["Timeline", "Week Three Consultant Full Of Ideas, Week Nine Consultant Just Wants Client To Open Email", ""], ["Local", "Executive Director Nods Warmly Through Recommendation She Implemented In 2019", "She let him finish. She is a better person than anyone in that room."], ["Study", "Ninety-Four Percent Of Deck Produced Between 11 PM And 2 AM On A Sunday", ""], ["Project Teams", "PM Says 'No Wrong Answers,' Is Lying, Everyone Knows, Exercise Works Anyway", ""], ["Founded 2017", "Club Cannot Agree Whether Engagements Are Ten Weeks Or Twelve, Both Camps Have Receipts", "The client has stopped asking."], ["Presentation Day", "Client Brings Entire Staff, Team Brings Slide Titled 'Key Takeaways'", ""], ["Values", "Impact, Diversity, Community, Opportunity Listed On Website; Fifth Value Is Snacks", ""], ["Global Network", "Branch Wins Global Award For Best Overall Branch, Immediately Becomes Insufferable, Deservedly", ""], ["Language", "Student Says 'Let's Take This Offline.' He Is Offline. He Is In A Room.", ""], ["Recruitment", "Chair Reads Two Hundred Fifty Essays, Every One Of Them Mentions A Grandmother", ""], ["Consensus", "Team Agrees On A Font, Immediately Loses Eleven Minutes To Chart Type", ""], ["Home Life", "Man Explains He Does Consulting, Parents Ask If He Is Okay For Money", ""], ["Second Round", "Candidate Asked If He Has Questions, Has Four, Asks All Four", ""], ["Follow-Up", "Client Says Recommendation Was 'Really Helpful,' Team Unsure If Being Managed", ""], ["Forty Projects In", "Nobody Has Ever Once Finished A Deck Before The Night Before", ""], ["Late Filing", "Applicant Who Missed The Deadline Emailed Anyway, Is Somehow Being Read Right Now", "This paper takes no position. This paper is the applicant."], ["Correction", "The Post Previously Reported The Hard Part Is The Money", "The hard part is getting people to agree. We regret the error and our entire worldview."]];
+// Deterministic strongest opener, then shuffle the rest.
+const rest = WIRE.map((_,i)=>i).slice(1);
+for(let i=rest.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[rest[i],rest[j]]=[rest[j],rest[i]];}
+const order=[0,...rest];
+let at=-1;
+const kicker=document.getElementById('kicker'),head=document.getElementById('head'),
+      dek=document.getElementById('dek'),count=document.getElementById('count'),
+      slot=document.querySelector('.slot');
 function next(){
-  at = (at + 1) % order.length;
-  const [k,h,d] = WIRE[order[at]];
-  kicker.textContent = k;
-  head.textContent = h;
-  dek.textContent = d;
-  dek.style.display = d ? '' : 'none';
-  count.textContent = (at+1) + ' / ' + order.length;
+  at=(at+1)%order.length;
+  const [k,h,d]=WIRE[order[at]];
+  kicker.textContent=k; head.textContent=h; dek.textContent=d;
+  dek.style.display=d?'':'none';
+  count.textContent=(at+1)+' of '+order.length;
   slot.classList.remove('fade'); void slot.offsetWidth; slot.classList.add('fade');
 }
-
-document.body.addEventListener('click', e=>{
-  if(e.target.closest('a') || e.target.closest('.about')) return;
+document.body.addEventListener('click',e=>{
+  if(e.target.closest('a')||e.target.closest('.about')) return;
   next();
 });
-document.addEventListener('keydown', e=>{
-  if(e.key===' '||e.key==='ArrowRight'||e.key==='Enter'){ e.preventDefault(); next(); }
+document.addEventListener('keydown',e=>{
+  if(e.key===' '||e.key==='ArrowRight'||e.key==='Enter'){e.preventDefault();next();}
 });
 next();
 </script>
